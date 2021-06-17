@@ -13,28 +13,73 @@
 
 <!-- Content Section -->
 {% block content %}
-    {{ super() }}
-    <div class="album py-5 bg-light">
-        <div class="container">
-            <div class="row">
-                {% for x in range(8) %}
-                <div class="col-md-3">
-                    <div class="card mb-3 shadow-sm">
-                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_178d67765ab%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_178d67765ab%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.7109375%22%20y%3D%22120.046875%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-holder-rendered="true">
-                        <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
-                                <small class="text-muted">9 mins</small>
-                            </div>
+{{ super() }}
+<div class="album py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center my-5">Acontece na Diocese</h2>
+        <div class="row">
+            {% for x in range(4) %}
+            <div class="col-md-3">
+                <a href="#">
+                    <div class="card mb-4 shadow-sm">
+                        <img src="media/zoo.jpg" alt="" srcset="">
+                        <div class="card-body text-center">
+                            <p class="card-text">Palestras/campanha {% print(x+1) %}</p>
                         </div>
                     </div>
-                </div>
-                {% endfor %}
+                </a>
+            </div>
+            {% endfor %}
+            <div class="col-md-3">
+                <a href="">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body text-center">
+                            <p class="card-text text-muted">ver mais</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
+        
+        <h2 class="text-center my-5">Conversa com o Bispo</h2>
+        <div class="row">
+            {% for x in range(4) %}
+            <div class="col-sm-3">
+                <a href="#">
+                    <div class="card mb-3 shadow-sm">
+                        <img src="media/zoo.jpg" alt="" srcset="">
+                        <div class="card-body text-center p-5">
+                            <p class="card-text">Conversa {% print(x+1) %}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+            <!-- <button class="btn btn-primary mb-4 shadow-sm d-flex justify-content-end">
+                <div class="text-center">
+                    <p class="text-muted">ver mais</p>
+                </div>
+            </button> -->
+            <div class="d-flex align-items-end flex-column bd-highlight mb-3" style="height: 200px;">
+                <div class="p-2 bd-highlight">Flex item</div>
+                <div class="p-2 bd-highlight">Flex item</div>
+                <div class="mt-auto p-2 bd-highlight">Flex item</div>
+            </div>
+        </div>
+        
+        <h2 class="text-center my-5">Galeria de vídeos</h2>
+        <div class="row">
+            {% for x in range(2) %}
+            <div class="col-md-6">
+                <div class="card mb-3 shadow-sm">
+                    <div class="video py-3">
+                        <video src="#"></video>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
     </div>
-{% endblock %}
+    {% endblock %}
+    
