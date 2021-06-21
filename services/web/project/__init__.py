@@ -31,6 +31,14 @@ class User(db.Model):
 def home():
     return render_template("home.html")
 
+@app.route("/administrativa", methods=["GET"])
+def admin():
+    return render_template("administrativa.html")
+
+@app.route("/congregacoes", methods=["GET"])
+def congregacoes():
+    return render_template("congregacoes.html")
+
 @app.route("/static/<path:filename>")
 def staticfiles(filename):
     return send_from_directory(app.config["STATIC_FOLDER"], filename)

@@ -31,10 +31,10 @@
         <header>
             <nav class="navbar navbar-dark bg-diocese">
                 <div class="container d-flex justify-content-between">
-                    <a class="navbar-brand" href="#">Diocese de Bauru</a>
                     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon"></span>
                     </button>
+                    <a class="navbar-brand" href="#">Diocese de Bauru</a>
                     <div class="navbar-collapse collapse" id="navbarsExample01">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
@@ -96,27 +96,25 @@
 
         <main role="main">
             {% block content %}
-            <section class="jumbotron text-center">
-                <div class="container">
-                    <h1 class="jumbotron-heading">Album example</h1>
-                    <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
-                    <p>
-                        <a href="#" class="btn btn-primary my-2">Main call to action</a>
-                        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-                    </p>
-                </div>
+            <section class="jumbotron text-center" style="background-image: url(https://images.unsplash.com/photo-1623843305620-5d2553e753e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);">
+                <!-- <div class="container-fluid">
+                    <p class="lead text-muted float-right"><a href="#">Encontre um lugar perto de você</a></p>
+                </div> -->
             </section>
+
             {% endblock %}
         </main>
 
         <footer class="text-muted">
             {% block footer %}
             <div class="container">
-                <p class="float-right">
-                    <a href="#">Back to top</a>
-                </p>
-                <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
-                <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+                <div class="container d-flex flex-row justify-content-around p-3">
+                    <a href="#"><img src="" alt="cnbb"></a>
+                    <a href="#"><img src="" alt="vatican news"></a>
+                    <a href="#"><img src="" alt="pascom"></a>
+                    <a href="#"><img src="" alt="setor caridade"></a>
+                </div>
+                <p class="text-center text-muted">@Copyright 2021</p>
             </div>
             {% endblock %}
         </footer>
