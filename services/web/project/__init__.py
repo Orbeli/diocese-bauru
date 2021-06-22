@@ -39,6 +39,30 @@ def admin():
 def congregacoes():
     return render_template("congregacoes.html")
 
+@app.route("/movimentos", methods=["GET"])
+def informacoes():
+    return render_template("movimentos.html")
+
+@app.route("/seminarios", methods=["GET"])
+def seminarios():
+    return render_template("seminarios.html")
+
+@app.route("/pastorais", methods=["GET"])
+def pastorais_movimentos():
+    return render_template("pastorais.html")
+
+@app.route("/coordenadoria-pastoral", methods=["GET"])
+def coordenadoria_pastoral():
+    return render_template("coordenadoria-pastoral.html")
+
+@app.route("/noticias", methods=["GET"])
+def noticias():
+    return render_template("noticias.html")
+
+@app.route("/paroquia", methods=["GET"])
+def paroquia():
+    return render_template("paroquia.html")
+
 @app.route("/static/<path:filename>")
 def staticfiles(filename):
     return send_from_directory(app.config["STATIC_FOLDER"], filename)

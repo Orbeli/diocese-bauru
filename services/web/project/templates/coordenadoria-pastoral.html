@@ -1,0 +1,35 @@
+{% extends "layouts/base.html" %}
+
+<!-- Page title -->
+{% block title %}Home{% endblock %}
+
+<!-- Head Section -->
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block content %}
+{{ super() }}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-6 p-2">
+            <div class="card p-2 my-2">
+                <h2>Região Pastoral 1</h2>
+                <ul>
+                    <li><a href="#" class="nav-link">01. Divino Espírito Santo – Bauru</a></li>
+                    <li><a href="#" class="nav-link">02. Nossa Senhora Aparecida – Bauru</a></li>
+                    <li><a href="#" class="nav-link">03. São Cristóvão – Bauru </a></li>
+                    <li><a href="#" class="nav-link">04. São Judas Tadeu e São Dimas – Bauru</a></li>
+                    <li><a href="#" class="nav-link">05. Santa Rita de Cássia – Bauru</a></li>
+                    <li><a href="#" class="nav-link">06. Santa Teresinha do Menino Jesus – Bauru </a></li>
+                    <li><a href="#" class="nav-link">07. Paróquia Maronita Nossa Senhora do Líbano</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
